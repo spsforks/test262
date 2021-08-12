@@ -12,14 +12,15 @@ description: >
     performed on 2000 argument x values
 ---*/
 
-// CHECK#1
 for (var i = 0; i <= 1000; i++)
 {
   var x = i / 10.0;
-  if (Math.round(x) !== Math.floor(x + 0.5))
-  {
-    throw new Test262Error("#1: 'x = " + x + "; Math.round(x) !== Math.floor(x + 0.5)'")
-  }
+
+  assert.sameValue(
+    Math.round(x),
+    Math.floor(x + 0.5),
+    'Math.round(i / 10.0) must return the same value returned by Math.floor(x + 0.5)'
+  );
 }
 
 for (i = -5; i >= -1000; i--)
@@ -32,8 +33,9 @@ for (i = -5; i >= -1000; i--)
     x = i / 10.0;
   }
 
-  if (Math.round(x) !== Math.floor(x + 0.5))
-  {
-    throw new Test262Error("#2: 'x = " + x + "; Math.round(x) !== Math.floor(x + 0.5)'")
-  }
+  assert.sameValue(
+    Math.round(x),
+    Math.floor(x + 0.5),
+    'Math.round(i / 10.0) must return the same value returned by Math.floor(x + 0.5)'
+  );
 }

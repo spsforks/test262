@@ -7,7 +7,6 @@ es5id: 15.8.2.5_A8
 description: Checking if Math.atan2(y,x) is -0, where y is equal to -0 and x>0
 ---*/
 
-// CHECK#1
 var y = -0;
 var x = new Array();
 x[0] = 0.000000000000001;

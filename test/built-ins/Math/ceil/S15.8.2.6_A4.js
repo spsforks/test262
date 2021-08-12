@@ -7,9 +7,5 @@ es5id: 15.8.2.6_A4
 description: Checking if Math.ceil(x) is +Infinity, where x is +Infinity
 ---*/
 
-// CHECK#1
 var x = +Infinity;
-if (Math.ceil(x) !== +Infinity)
-{
-  throw new Test262Error("#1: 'var x = +Infinity; Math.ceil(x) !== +Infinity'");
-}
+assert.sameValue(Math.ceil(x), +Infinity, 'Math.ceil(+Infinity) must return +Infinity');

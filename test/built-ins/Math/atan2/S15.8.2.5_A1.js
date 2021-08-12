@@ -9,7 +9,6 @@ description: >
     different x and y values
 ---*/
 
-// CHECK#1
 
 var vals = new Array();
 vals[0] = -Infinity;

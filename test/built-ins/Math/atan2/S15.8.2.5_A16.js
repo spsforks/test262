@@ -9,7 +9,6 @@ description: >
     is equal to +Infinity
 ---*/
 
-// CHECK#1
 var x = +Infinity;
 var y = new Array();
 y[0] = -0.000000000000001;

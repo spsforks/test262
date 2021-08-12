@@ -7,9 +7,5 @@ es5id: 15.8.2.15_A5
 description: Checking if Math.round(x) is -Infinity, where x is -Infinity
 ---*/
 
-// CHECK#1
 var x = -Infinity;
-if (Math.round(x) !== -Infinity)
-{
-  throw new Test262Error("#1: 'var x=-Infinity; Math.round(x) !== -Infinity'");
-}
+assert.sameValue(Math.round(x), -Infinity, 'Math.round(-Infinity) must return -Infinity');

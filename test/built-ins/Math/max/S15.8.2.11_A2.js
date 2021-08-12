@@ -11,7 +11,6 @@ description: >
 
 assert.sameValue(Math.max(NaN), NaN, "NaN");
 
-// CHECK#2
 var vals = new Array();
 vals[0] = -Infinity;
 vals[1] = -0.000000000000001;
@@ -37,7 +36,6 @@ for (var i = 0; i <= 1; i++)
   }
 }
 
-// CHECK #3
 var k = 1;
 var l = 2;
 for (var i = 0; i <= 2; i++)

@@ -7,9 +7,4 @@ es5id: 15.8.2.17_A5
 description: Checking if Math.sqrt(+Infinity) is +Infinity
 ---*/
 
-// CHECK#1
-var x = +Infinity;
-if (Math.sqrt(x) !== +Infinity)
-{
-  throw new Test262Error("#1: 'var x=+Infinity; Math.sqrt(x) !== +Infinity'");
-}
+assert.sameValue(Math.sqrt(+Infinity), +Infinity, 'Math.sqrt(+Infinity) must return +Infinity');

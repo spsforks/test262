@@ -7,9 +7,5 @@ es5id: 15.8.2.8_A3
 description: Checking if Math.exp(-0) is 1
 ---*/
 
-// CHECK#1
 var x = -0;
-if (Math.exp(x) !== 1)
-{
-  throw new Test262Error("#1: 'var x = -0; Math.exp(x) !== 1'");
-}
+assert.sameValue(Math.exp(x), 1, 'Math.exp(-0) must return 1');
