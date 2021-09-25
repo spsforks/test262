@@ -4,6 +4,7 @@
 /*---
 esid: sec-initializenumberformat
 description: Checks the propagation of exceptions from the options for the NumberFormat constructor.
+features: [Intl.NumberFormat-v3]
 ---*/
 
 function CustomError() {}
@@ -19,6 +20,8 @@ const options = [
   "maximumFractionDigits",
   "minimumSignificantDigits",
   "maximumSignificantDigits",
+  "roundingIncrement",
+  "trailingZeroDisplay",
   "useGrouping",
 ];
 
